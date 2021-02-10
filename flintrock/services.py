@@ -339,7 +339,7 @@ class Spark(FlintrockService):
                     if [ -e "make-distribution.sh" ]; then
                         ./make-distribution.sh -Phadoop-{hadoop_short_version}
                     else
-                        ./dev/make-distribution.sh -Phadoop-{hadoop_short_version}
+                        ./dev/make-distribution.sh -Pspark-ganglia-lgpl -Phadoop-{hadoop_short_version}
                     fi
                 """.format(
                     repo=shlex.quote(self.git_repository),
